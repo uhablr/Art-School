@@ -231,21 +231,103 @@ header {
 }
 
 .about-button {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #ff4800;
-  color: #171717;
-  text-decoration: none;
-  border-radius: 50px 100px 80px 100px;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ff4800;
+    color: #171717;
+    text-decoration: none;
+    border-radius: 50px 100px 80px 100px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .about-button:hover {
-  color: #ffffff;
-  background-color: #ff4800;
-  transform: scale(1.05);
+    color: #ffffff;
+    background-color: #ff4800;
+    transform: scale(1.05);
+}
+
+/* Services Section */
+.services {
+    padding: 30px 60px 60px;
+    text-align: center;
+    background-color: #ffcbc1;
+}
+
+/* services title */
+.services-title {
+    font-size: 28px;
+    color: #f30061;
+    margin-bottom: 25px;
+    font-weight: bold;
+
+}
+
+/* all Services  */
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service {
+    background-color: white;
+    border: 2px solid white;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #f30061;
+}
+
+.service h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.service:hover h3 {
+    color: #f30061;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.service-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* button service (show-more) */
+#show-more {
+    padding: 10px 35px;
+    border: none;
+    margin-top: 50px;
+    border: 2px solid #ff1271;
+    border-radius: 90px 30px 80px 50px;
+    background-color: #f30061;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#show-more:hover {
+    transform: scale(1.03);
+    background-color: #ff0b6d;
 }
