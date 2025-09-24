@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* body */
 body {
     font-family: 'League Spartan', Arial, sans-serif;
@@ -186,7 +190,7 @@ header {
     margin-bottom: 10px;
 }
 
-/* details About */
+/* details About / Services / contact */
 .details {
     max-width: 800px;
     margin: 0 auto;
@@ -330,4 +334,127 @@ header {
 #show-more:hover {
     transform: scale(1.03);
     background-color: #ff0b6d;
+}
+
+/* Section contact */
+.contact {
+    text-align: center;
+    padding: 50px 50px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* details contact  */
+.contact-title {
+    font-size: 28px;
+    color: #a24b8f;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.contact-description {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #d51126;
+}
+
+/* form contact */
+input[type="text"],
+input[type="email"] {
+    width: 90%;
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 20px 15px;
+}
+
+/* button contact (Send) */
+.contact button {
+    padding: 10px 35px;
+    border: none;
+    margin: 20px;
+    border: 2px solid #c569b1;
+    border-radius: 50px 30px 50px 50px;
+    background-color: #a24b8f;
+    color: #ffffff;
+    cursor: pointer;
+    transition: padding 0.3s ease, transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    padding: 10px 45px;
+    transform: scale(1.03);
+    background-color: #c569b1;
+}
+
+/* footer */
+.footer {
+    background-color: #f15651;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+}
+
+.footer-section h2 {
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul {
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #f8f8f8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #a24b8f;
+}
+
+.footer-section.contact {
+    background-color: #a24b8f;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin-top: 10px;
 }
