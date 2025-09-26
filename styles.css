@@ -1,13 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Protest+Riot&display=swap');
 
+/* default spacing and box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* smooth scrolling */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+/* Always the site in light mode */
+:root {
+    color-scheme: light;
+}
+
+/* selected text highlight */
+::selection {
+    background: #fa3b10;
+    color: #ffffff;
+}
+
+/* scrollbar appearance */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffcbc1;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fa3b10;
+    border-radius: 2px;
+}
+
+/* loading */
+.loading {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotating-img {
+    width: 50px;
+    height: 50px;
+    animation: spinScale 4s linear infinite;
+    transform-origin: center center;
+}
+
+@keyframes spinScale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(90deg) scale(1.2);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1);
+    }
+
+    75% {
+        transform: rotate(270deg) scale(0.8);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    80% {
+        transform: translateY(-5px) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 /* body */
@@ -84,6 +171,20 @@ header {
     background-color: #ffffff;
     border: 2px solid #fa3b10;
     color: #000000;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #000000;
+    margin: 3px 0;
 }
 
 /* Home Section */
@@ -457,4 +558,175 @@ button:hover {
 
 .footer-bottom p {
     margin-top: 10px;
+}
+
+
+/* Responsive Navigation Menu */
+@media (max-width: 1024px) {
+
+    /* navigation */
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    .nav ul li {
+        margin: 16px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Home Section */
+    .content h1 {
+        font-size: 2.2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .cta {
+        padding: 10px 20px;
+        font-size: 1.3rem;
+    }
+
+    /* About Section */
+    .card {
+        min-width: 100%;
+        font-size: 0.9em;
+    }
+
+    .card-icon {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    .about-title,
+    .services-title,
+    .contact-title {
+        font-size: 1.8em;
+    }
+
+    .about-description,
+    .contact-description {
+        font-size: 1em;
+    }
+
+    .about-list li {
+        font-size: 0.9em;
+    }
+
+    .about-button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 30px 35px;
+    }
+
+    .service {
+        width: 80%;
+    }
+
+    .service h3 {
+        font-size: 1rem;
+    }
+
+    .service p {
+        font-size: 0.9rem;
+    }
+
+    /* contact Section */
+    .contact {
+        padding: 30px;
+    }
+
+    /* footer */
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+
+    .footer-section {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Home Section */
+    .content h1 {
+        font-size: 1.9rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .cta {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .card {
+        min-width: 100%;
+        font-size: 0.8em;
+    }
+
+    .card-icon {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .about-title {
+        font-size: 1.5em;
+    }
+
+    .about-description {
+        font-size: 0.9em;
+    }
+
+    .about-list li {
+        font-size: 0.8em;
+    }
+
+    .about-button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Services Section */
+    .service {
+        width: 100%;
+        /* Un service par ligne */
+    }
+
+    .services {
+        padding: 50px 35px;
+    }
+
+    /* contact Section */
+    button {
+        width: 70%;
+    }
 }
